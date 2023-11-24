@@ -1,19 +1,17 @@
 <!doctype html>
 <html class="h-100" lang="en">
 
-  <head>
-      <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-  <meta name="description" content="A growing collection of ready to use components for the CSS framework Bootstrap 5">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png">
-  <meta name="author" content="Holger Koenemann">
-  <meta name="generator" content="Eleventy v2.0.0">
-  <meta name="HandheldFriendly" content="true">
-  <title>Stride HTML Template - Frontpage one</title>
-  <link rel="stylesheet" href="css/theme.min.css">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="description" content="A growing collection of ready to use components for the CSS framework Bootstrap 5">
+    <link rel="icon" type="image/png" sizes="100x100" href="img/seacucumber.png" type="image/x-icon">
+    <meta name="author" content="Holger Koenemann">
+    <meta name="generator" content="Eleventy v2.0.0">
+    <meta name="HandheldFriendly" content="true">
+    <title>Seacucumber</title>
+    <link rel="stylesheet" href="css/theme.min.css">
+</head>
 
    <style>
 
@@ -49,6 +47,59 @@
 
 </style>
 
+<style>
+  .toggle-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .toggle-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Place the text in front of the image */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .toggle-container:hover .toggle-content {
+    opacity: 1;
+  }
+  .toggle-image {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+.toggle-image1 {
+    background-image: url('img/atre.png');
+}
+
+.toggle-image2 {
+    background-image: url('img/cabra.png');
+}
+
+.toggle-image3 {
+    background-image: url('img/royalcucumber.png');
+}
+
+.toggle-image4 {
+    background-image: url('img/apu.png');
+}
+
+.toggle-image5 {
+    background-image: url('img/holu1.png');
+}
+
+</style>
+
   </head>
 
   <body data-bs-spy="scroll" data-bs-target="#navScroll">
@@ -56,11 +107,10 @@
     <nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top" tabindex="0">
   <div class="container">
     <a class="navbar-brand pe-4 fs-4" href="/">
-  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-layers-half" viewbox="0 0 16 16">
-    <path d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z"/>
-  </svg>
-  <span class="ms-1 fw-bolder">Stride</span>
-</a>
+      <img src="img/seacucumber.png" alt="Stride Logo" width="45" height="45">
+      <span class="ms-1 fw-bolder">SEACUCUMBER</span>
+    </a>
+    
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -68,8 +118,8 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
-    <a class="nav-link" href="#services" aria-label="Brings you to the frontpage">
-      Services
+    <a class="nav-link" href="#seacucumber" aria-label="Brings you to the frontpage">
+      Seacucumber
     </a>
   </li>
   <li class="nav-item">
@@ -99,30 +149,27 @@
   </li>
 
     </ul>
-      <a href="https://templatedeck.com" data-splitbee-event="Click Download" aria-label="Download this template" class="link-dark pb-1 link-fancy me-2">
-        Download this Template       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download ms-1" viewBox="0 0 16 16">
-                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-              </svg>
-      </a>
+   
 
     </div>
 </div>
 </nav>
 
-    <main>
-      <div class="w-100 overflow-hidden bg-gray-100" id="top">
-  
+<main>
+  <div class="w-100 overflow-hidden bg-gray-100" id="top">
+
 <div class="container position-relative">
-  <div class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left" style="background-image: url(img/webp/interior11.webp);">
-    
-  </div>
-    <div class="row">
+<div class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left" style="background-image: url(img/images.webp);">
+
+</div>
+<div class="row">
 
 <div class="col-lg-7 py-vh-6 position-relative" data-aos="fade-right">
-  <h1 class="display-1 fw-bold mt-5">Sell more useless stuff faster!</h1>
-  <p class="lead">To be honest, this is just a stupid placeholder text. We don´t know how to sell anything, not even lesser or slower as you.</p>
-  <a href="#" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5">Get started free</a>
+<h1 class="display-1 fw-bold mt-5">Sea Cucumber</h1>
+<p class="lead">Sea cucumbers are marine animals that belong to the class Holothuroidea. 
+They are echinoderms, related to starfish and sea urchins. Sea cucumbers are found in 
+oceans around the world, from shallow coastal waters to deep-sea environments.</p>
+<a href="#" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5">Visit us to know more!</a>
 </div>
 
 
@@ -132,36 +179,64 @@
 
 </div>
 
-<div class="py-vh-5 w-100 overflow-hidden" id="services">
+<div class="py-vh-5 w-100 overflow-hidden" id="seacucumber">
   <div class="container">
       <div class="row d-flex justify-content-end">
-<div class="col-lg-8" data-aos="fade-down"><h2 class="display-6">Okay, there are three really good reasons for us. There are no more than three, but we think three is a reasonable good number of good stuff.</h2></div>
+<div class="col-lg-8" data-aos="fade-down"><h2 class="display-6">Different Types of Sea Cucumber in MSU NAAWAN. Sea Cucumbers are remarkable creatures that play a significant role in marine ecosystems.</h2></div>
 </div>
 <div class="row d-flex align-items-center">
-<div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+<!--Intig-->
+<div class="col-md-6 col-lg-4 py-vh-6 pb-0 toggle-container" data-aos="fade-up" data-aos-delay="600">
+  <div class="toggle-content">
   <span class="h5 fw-lighter">01.</span>
-  <h3 class="py-5 border-top border-dark">We rented this fancy startup office in an old factory building.</h3>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus culpa, voluptatibus ex itaque, sapiente a consequatur inventore beatae, ipsam debitis omnis consequuntur iste asperiores. Similique quisquam debitis corrupti deserunt, dolor.</p>
-  <a href="#" class="link-fancy">Learn more
-  </a>
+  <h3 class="py-5 border-top border-dark">Holothuria Atra</h3>
+  <p>Holothuria atra, also known as the black sea cucumber or lollyfish, is a common and widespread species found in tropical and subtropical Indo-Pacific waters.</p>
+  <p>Its body is cylindrical and leathery, with a smooth, black skin that is often covered in sand or debris. It has 20 retractable tentacles surrounding its mouth, which it uses to feed on detritus and small organisms.</p>
+</div>
+<div class="toggle-image toggle-image1"></div>
 </div>
 
-<div class="col-md-6 col-lg-4 py-vh-4 pb-0" data-aos="fade-up" data-aos-delay="400">
+<div class="col-md-6 col-lg-4 py-vh-6 pb-0 toggle-container" data-aos="fade-up" data-aos-delay="600">
+  <div class="toggle-content">
   <span class="h5 fw-lighter">02.</span>
-  <h3 class="py-5 border-top border-dark">We don´t know exactly what we are doing. But thats good because we can´t break something intentionally.</h3>
-  <p>Lorem, ipsum dolor sit  adipisicing elit. Minus culpa, voluptatibus ex itaque, sapiente a consequatur inventore beatae, ipsam debitis omnis consequuntur iste asperiores. Similique quisquam debitis corrupti deserunt, dolor.</p>
-  <a href="#" class="link-fancy">Learn more
-  </a>
+  <h3 class="py-5 border-top border-dark">Holothuria Scabra</h3>
+  <p>Holothuria scabra, commonly known as sandfish, is a species of sea cucumber in the family Holothuriidae. It is a commercially important species, harvested and processed into "beche-de-mer" and eaten in China and other Pacific coastal communities.</p>
+  <p>Sandfish are found in shallow waters, rarely in depths of more than 10 meters. They are typically found on inner reef flats of fringing and lagoon-islets reefs, coastal areas under terrigenous influence, and near mangroves.</p>
+</div>
+<div class="toggle-image toggle-image2"></div>
 </div>
 
-<div class="col-md-6 col-lg-4 py-vh-6 pb-0" data-aos="fade-up" data-aos-delay="600">
-  <span class="h5 fw-lighter">03.</span>
-  <h3 class="py-5 border-top border-dark">There is no real number three reason. So please read again number one and two.</h3>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus culpa, voluptatibus ex itaque, sapiente a consequatur inventore beatae, ipsam debitis omnis consequuntur iste asperiores. Similique quisquam debitis corrupti deserunt, dolor.</p>
-  <a href="#" class="link-fancy">Learn more
-  </a>
+
+<div class="col-md-6 col-lg-4 py-vh-6 pb-0 toggle-container" data-aos="fade-up" data-aos-delay="600">
+  <div class="toggle-content">
+    <span class="h5 fw-lighter">03.</span>
+    <h3 class="py-5 border-top border-light">Royal Cucumber</h3>
+    <p>Parastichopus regalis, also known as the royal sea cucumber, is a species of sea cucumber in the family Stichopodidae.</p>
+  </div>
+  <div class="toggle-image toggle-image3"></div>
+</div>
+
+
+
+<div class="col-md-6 col-lg-4 py-vh-6 pb-0 toggle-container" data-aos="fade-up" data-aos-delay="600">
+  <div class="toggle-content">
+  <span class="h5 fw-lighter">04.</span>
+  <h3 class="py-5 border-top border-dark">Apotichupus janponicus</h3>
+  <p>Apostichopus japonicus is a species of sea cucumber in the family Stichopodidae. It is found in shallow temperate waters along the coasts of south east Asia and is commonly known as the Japanese spiky sea cucumber or the Japanese sea cucumber</p>
+</div>
+<div class="toggle-image toggle-image4"></div>
+</div>
+
+<div class="col-md-6 col-lg-4 py-vh-6 pb-0 toggle-container" data-aos="fade-up" data-aos-delay="600">
+  <div class="toggle-content">
+  <span class="h5 fw-lighter">05.</span>
+  <h3 class="py-5 border-top border-dark">Holothuria Tubulosa</h3>
+  <p>Holothuria tubulosa, also known as the cotton-spinner. It's known for its ability to change skin color and texture, and its hermaphroditic reproductive system.</p>
+</div>
+<div class="toggle-image toggle-image5"></div>
 </div>
 </div>
+
 
   </div>
 </div>
