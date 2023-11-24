@@ -2,6 +2,7 @@
 <html class="h-100" lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <meta name="description" content="A growing collection of ready to use components for the CSS framework Bootstrap 5">
@@ -9,12 +10,40 @@
     <meta name="author" content="Holger Koenemann">
     <meta name="generator" content="Eleventy v2.0.0">
     <meta name="HandheldFriendly" content="true">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+    
+    <script src="https://unpkg.com/ml5@0.5.0/dist/ml5.min.js"></script>
     <title>Seacucumber</title>
     <link rel="stylesheet" href="css/theme.min.css">
+
+    <script src="sketch.js"></script>
 </head>
 
    <style>
 
+.card-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+#sketch-container {
+  width: 100%; /* Set the width to 100% for responsiveness */
+  height: 0; /* Set initial height to 0 */
+  padding-bottom: 75%; /* Set padding-bottom based on the aspect ratio (e.g., 16:9) */
+  position: relative;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 /* inter-300 - latin */
 @font-face {
   font-family: 'Inter';
@@ -48,6 +77,10 @@
 </style>
 
 <style>
+  .canvas {
+  display: block;
+}
+
   .toggle-container {
     position: relative;
     overflow: hidden;
@@ -181,6 +214,7 @@ oceans around the world, from shallow coastal waters to deep-sea environments.</
 
 <div class="py-vh-5 w-100 overflow-hidden" id="seacucumber">
   <div class="container">
+   
       <div class="row d-flex justify-content-end">
 <div class="col-lg-8" data-aos="fade-down"><h2 class="display-6">Different Types of Sea Cucumber in MSU NAAWAN. Sea Cucumbers are remarkable creatures that play a significant role in marine ecosystems.</h2></div>
 </div>
@@ -277,10 +311,21 @@ oceans around the world, from shallow coastal waters to deep-sea environments.</
 
 <div class="py-vh-5 w-100 overflow-hidden" id="numbers">
   <div class="container">
+   
       <div class="row d-flex justify-content-between align-items-center">
   <div class="col-lg-5">
+    <div class="card-container">
+      <!-- HTML elements to display results -->
+      <div id="label-result">Label: waiting...</div>
+      <div id="emoji-result">Emoji: 🚂</div>
+      <!-- Create a div to contain the sketch -->
+      <div id="sketch-container"></div>
+    </div
     <h3 class="py-5 border-top border-dark" data-aos="fade-right">Our magic numbers</h3>
+
 </div>
+
+
 <div class="col-lg-6">
   <div class="row">
     <div class="col-12">
