@@ -1,0 +1,645 @@
+	*
+	{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	}
+
+	.header
+	{
+		min-height: 100vh;
+		width: 100%;
+		background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/bg.jpg);
+		background-position: center;
+		background-size: cover;
+		position: relative;
+	}
+	.video-wrapper
+	{
+		width:100%;
+		height:100vh;
+		overflow: hidden;	
+	}
+
+	video
+	{
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+	
+	nav
+	{
+		display: flex;
+		padding: 2% 6%;
+		justify-content: space-between;
+		align-items: center;
+	}
+		/* Logo Size */
+		nav img
+		{
+			width: 70px; 
+		}	
+		
+		.nav-links
+		{
+			flex: 1;
+			text-align: right;
+			
+		}
+		
+		.nav-links ul li
+		{
+			list-style: none;
+			display: inline-block;
+			padding: 8px 12px;
+			position: relative;
+		}
+		
+		.nav-links ul li a {
+			color: #fff;
+			text-decoration: none;
+			font-size: 15px;
+			position: relative; /* Add relative positioning to the anchor element */
+		}
+		
+		.nav-links ul li a::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			bottom: 0;
+			left: 0;
+			background-color: #17a352;
+			transform: scaleX(0); /* Initially, set the underline to zero width */
+			transform-origin: bottom right;
+			transition: transform 0.3s ease; /* Add a smooth transition effect */
+		}
+		
+		.nav-links ul li a:hover::before {
+			transform: scaleX(1); /* Expand the underline on hover */
+			transform-origin: bottom left;
+		}
+		
+		
+		
+		.nav-links ul li:: after
+		{
+			content: '';
+			width: 0%;
+			height: 2px;
+			background: #f44336;
+			display: block;
+			margin: auto;
+			transition: 0.5s;
+		}
+		.nav-links ul li:hover::after
+		{
+			width:100;
+		}								
+
+		
+		
+	.text-box
+	{
+		width: 90%;
+		color: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		text-align: center;
+	}
+	
+		.text-box h1
+		{
+			font-size: 95px;
+		}
+		
+		.text-box p
+		{
+			margin: 10px 0 40px;
+			font-size: 15px;
+			color: #fff;
+		}
+
+	.hero-btn
+	{
+		display: inline-block;
+		text-decoration: none;
+		color: #fff;
+		border: 1px solid #fff;
+		padding: 12px 34px;
+		font-size: 13px;
+		background: transparent;
+		position: relative;
+		cursor: pointer;
+		border-radius: 25px;
+	}
+	
+		.hero-btn:hover
+		{
+			border: 1px solid #0c6b24;
+			background: #0c6b24;
+			transition: 1s;
+		}
+		
+		nav .fa
+		{
+			display: none;
+		}
+		
+		@media(max-width: 700px)
+		{
+			
+			.text-box h1
+			{
+				font-size: 20px;
+			}
+			
+			.nav-links ul li
+			{
+				display: block;
+			}
+			
+			.nav-links
+			{
+				position: fixed;
+				background: #0000CD;
+				height: 100vh;
+				width: 200px;
+				top: 0;
+				right: -200px;
+				text-align: left;
+				z-index: 2;
+				transition: 1s;
+			}
+			
+			nav .fa
+			{
+				display: block;
+				color: #fff;
+				margin: 10px;
+				font-size: 22px;
+				cursor: pointer;
+			}
+			
+			.nav-links ul
+			{
+				padding: 30px;
+			}
+		}
+		
+	.objectives
+	{
+		width: 80%;
+		margin: auto;
+		text-align: center;
+		padding-top: 100px;
+	}
+	
+		h1
+		{
+			font-size: 36px;
+			font-weight: 600;
+		}
+		
+		p
+		{
+			color: #777;
+			font-size: 14px;
+			font-weight: 300px;
+			line-height: 22px;
+			padding: 10px;
+		}
+		
+	.row
+	{	
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.objectives-col {
+		flex-basis: 31%;
+		background-image: none;
+		border-radius: 10px;
+		margin-bottom: 5%;
+		padding: 20px 12px;
+		box-sizing: border-box;
+		transition: 0.5s;
+		position: relative;
+		text-align: center;
+	}
+	
+	.objectives-col img {
+		width: 100%; /* Make sure the image spans the entire container */
+		display: block; /* Remove any default image spacing */
+		height: 200px; /* Set a fixed height for the images */
+	}
+	
+	.objectives-col h3 {
+		color: white;
+		position: absolute; /* Position the text absolutely within the container */
+		top: 50%; /* Position it vertically in the middle of the container */
+		left: 50%; /* Position it horizontally in the middle of the container */
+		transform: translate(-50%, -50%); /* Center the text perfectly */
+		padding: 10px; /* Add some padding to the text for readability */
+	}
+	
+	@media(max-width: 700px) {
+		.row {
+			flex-direction: column;
+		}
+	
+		.objectives-col img {
+			height: auto; /* Remove fixed height on small screens */
+		}
+	}
+		
+	.branches
+	{
+		width: 80%;
+		margin: auto;
+		text-align: center;
+		padding-top: 50px;
+	}
+	
+		.branches-col
+		{
+			flex-basis: 32%;
+			border-radius: 10px;
+			margin-bottom: 30px;
+			position: relative;
+			overflow: hidden;
+		}
+		
+		.branches-col img
+		{
+			width: 100%;
+			display: block;
+		}
+	
+	.layer
+	{
+		background: transparent;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: 0.5s;
+	}	
+		
+		.layer h3
+		{
+			width: 100%;
+			font-weight: 500;
+			color: #fff;
+			font-size: 20px;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			position: absolute;
+			opacity: 0;
+			transition: 0.5s;
+		}
+		
+			.layer:hover h3
+			{
+				bottom: 49%;
+				opacity: 1;
+			}
+			.layer:hover
+		{
+			background: #0c6b248f;
+		}
+	.facilities
+	{
+		width: 80%;
+		margin: auto;
+		text-align: center;
+		padding-top: 100px;
+	}
+	
+		.facilities-col
+		{
+			flex-basis: 31%;
+			border-radius: 10px;
+			margin-bottom: 5%;
+			text-align: left;
+		}
+		
+		.facilities-col img
+		{
+			width: 100%;
+			border-radius: 10px;
+		}
+		
+		.facilities-col p
+		{
+			padding: 0;
+		}
+		
+		.facilities-col h3
+		{
+			margin-top: 16px;
+			margin-bottom: 15px;
+			text-align: left;
+		}
+	
+	.cta
+	{
+		margin: 100px auto;
+		width: 80%;
+		background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/contactBG.jpg);
+		background-position: center;
+		background-size: cover;
+		border-radius: 10px;
+		text-align: center;
+		padding: 100px 0;
+	}
+	
+		.cta h1
+		{
+			color: #fff;
+			margin-bottom: 40px;
+			padding: 0;
+		}
+		
+		@media(max-width: 700px)
+		{
+			.cta h1
+			{
+				font-size: 24px;
+			}
+		}
+		
+	.footer
+	{
+		width: 100%;
+		text-align: center;
+		padding: 30px 0;
+	}
+	
+		.footer h4
+		{
+			margin-bottom: 25px;
+			margin-top: 20px;
+			font-weight: 600;
+		}
+		
+	.icons .fa
+	{
+		margin: 0 13px;
+		cursor: pointer;
+		padding: 18px 0;
+	}
+	
+	
+	
+	
+	
+	.sub-header
+	{
+		height: 50vh;
+		width: 100%;
+		background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/facility3.jpg);
+		background-position: center;
+		background-size: cover;
+		text-align: center;
+		color: #fff;
+		padding: 30px 0;	
+	}
+	
+
+	.sub-header1
+	{
+		height: 50vh;
+		width: 100%;
+		background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/facility4.jpg);
+		background-position: center;
+		background-size: cover;
+		text-align: center;
+		color: #fff;
+		padding: 30px 0;	
+	}
+
+	.sub-header2
+	{
+		height: 50vh;
+		width: 100%;
+		background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/bg10.jpg);
+		background-position: center;
+		background-size: cover;
+		text-align: center;
+		color: #fff;
+		padding: 30px 0;	
+	}
+
+		.sub-header h1
+		{
+			margin: 0;
+			font-size: 60px;
+			margin-top: 50px;
+		}
+	.about-us
+	{
+		width: 80%;
+		margin: auto;
+	}
+	
+		.about-col
+		{
+			flex-basis: 48%;
+			padding: 30px 2px;
+		}
+		
+		.about-col img
+		{
+			width: 100%;
+		}
+		
+		.about-col h1
+		{
+			padding-top: 0;
+		}
+		
+		.about-col p
+		{
+			padding: 15px 0 25px;
+		}
+		
+	.red-btn
+	{
+		border: 1px solid black;
+		background: transparent;
+		color: black;
+	}
+	
+		.red-btn:hover 
+		{
+			color: #fff;
+		}
+	
+	.location
+	{
+		width: 80%;
+		margin: auto;
+		padding: 80px 0;
+	}
+	
+		.location iframe 
+		{
+			width: 100%;
+		}
+	
+	.contact-us
+	{
+		width: 80%;
+		margin: auto;
+	}
+	
+		.contact-col
+		{
+			flex-basis: 48%;
+			margin-bottom: 30px;
+		}
+		
+		.contact-col div
+		{
+			display: flex;
+			align-items: center;
+			margin-bottom: 40px;
+		}
+
+			.contact-col div .fa
+			{
+				font-size: 28px;
+				margin: 10px;
+				margin-right: 30px;
+			}
+			
+			.contact-col div p 
+			{
+				padding: 0;
+			}
+			
+			.contact-col div h5
+			{
+				font-size: 20px;
+				margin-bottom: 5px;
+				color: #555;
+				font-weight: 400;
+			
+			}
+			
+	.contact-col input, .contact-col textarea
+	{
+		width: 100%;
+		padding: 15px;
+		margin-bottom: 17px;
+		outline: none;
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+	}
+	
+	.insurance
+	{
+		width: 80%;
+		margin: auto;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	
+		.insurance-col h1
+		{
+			text-align: center;
+		}		
+		
+		.insurance-col img
+		{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 70%;
+			border-radius: 10px;
+			
+		}
+
+/* Style the Developers section */
+.developers {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.developers h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.developers p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.developer-col {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto 20px;
+}
+
+.developer-col img {
+    max-width: 40%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.developer-col h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.developer-col p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Seaweed Page */
+.seaweed-table {
+    padding: 20px;
+    text-align: justify;
+
+}
+/* Table Styles */
+table {
+    width: 90%;
+    border-collapse: collapse;
+	margin-left: 80px;
+}
+
+table th, td {
+    border: 1px solid black;
+
+}
+
+table th {
+    background-color: green;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+table th, table td {
+    padding: 10px;
+	font-size: 16px;
+}
+
+
+
