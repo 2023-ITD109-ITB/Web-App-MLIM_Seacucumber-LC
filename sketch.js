@@ -37,10 +37,7 @@ function draw() {
   text(label, width / 2, height - textSizeResponsive);
 
   // Calculate responsive emoji size and position
-  let emojiSizeResponsive = width / 4; // Adjust the factor as needed
-  textSize(emojiSizeResponsive);
-  let emojiY = height / 2 + textSizeResponsive / 2; // Adjust the position
-  text(getEmoji(), width / 2, emojiY);
+
 }
 
 function getEmoji() {
