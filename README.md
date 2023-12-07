@@ -30,12 +30,16 @@ Holothuria tubulosa, also known as the cotton-spinner. It's known for its abilit
 
 # Here is the glymps of the Website!
 
-![Alt text](image.png)
+![image](https://github.com/syntaxboybe/Seacucumber/assets/113691000/2f4ca19c-e23c-4ce7-b061-f35ef6b51393)
 
-![Alt text](image-1.png)
+![image](https://github.com/syntaxboybe/Seacucumber/assets/113691000/4b1b674e-e19b-4d20-8973-59f72c3f90f0)
 
-![Alt text](image-2.png)
+![image](https://github.com/syntaxboybe/Seacucumber/assets/113691000/22829b37-9afa-4dc9-9be3-be1240685d0e)
 
-![Alt text](image-3.png)
+![image](https://github.com/syntaxboybe/Seacucumber/assets/113691000/2d4a6c1f-d140-4694-bbca-de3e0623f9a7)
 
-![Alt text](image-4.png)
+![image](https://github.com/syntaxboybe/Seacucumber/assets/113691000/b73a5101-08e0-475c-bfbb-77b9e2299780)
+
+
+
+
