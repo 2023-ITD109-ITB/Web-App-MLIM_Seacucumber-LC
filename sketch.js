@@ -78,6 +78,20 @@ function windowResized() {
   video.size(width, height);
 }
 
+function mouseClicked() {
+  const constraints = video.getConstraints();
+  const currentFacingMode = constraints.video.facingMode;
+
+  constraints.video.facingMode = currentFacingMode === 'user' ? 'environment' : 'user';
+
+  video.remove();
+  video = createCapture(constraints);
+  video.size(width, height);
+  video.hide();
+
+  classifyVideo();
+}
+
 window.onload = function() {
   setup();
 };
