@@ -26,8 +26,8 @@ function draw() {
   image(video, 0, 0, width, height);
 
   // Update HTML elements with the results
-  document.getElementById('label-result').innerText = 'Label: ' + label;
-  document.getElementById('emoji-result').innerText = 'Emoji: ' + getEmoji();
+  document.getElementById('label-result').innerText = 'This is ' + label;
+  document.getElementById('emoji-result').innerText=''+getInfo();
 
   // Calculate responsive text size
   let textSizeResponsive = width / 20; // Adjust the factor as needed
@@ -40,16 +40,20 @@ function draw() {
 
 }
 
-function getEmoji() {
+function getInfo() {
   // Pick an emoji, the "default" is train
-  if (label == "Rainbow") {
-    return "🌈";
-  } else if (label == "Unicorn") {
-    return "🦄";
-  } else if (label == "Ukulele") {
-    return "🎸";
+  if (label == "Holothuria Scabra") {
+    return "Phylum: Echinodermata \nOrder: Holothuroidea \nFamily: Holothuriidae \nGenus: Holothuria \nSpecies: Holothuria scabra \nPhysical appearance description: Brown, tan, yellow, reddish brown in color";
+  } else if (label == "Apostichopus japonicus") {
+    return "Phylum: Echinodermata \nClass: Holothuroidea \nOrder: Elasipodia \nFamily: Synallactida \nGenus: Apostichopus \nSpecies: Apostichopus japonicus \nPhysical appearance description: Irregular tube feet has highly branched feathery tentacles with soft and flexible elongated cylindrical body. Reddish brown in color.";
+  } else if (label == "Royal cucumber") {
+    return "Phylum: Echinodermata \nClass: Holothuroidea \nOrder: Asipodochirotida \nFamily: Stichpodidae \nGenus: Stichopus \nSpecies: Royal Cucumber \nPhysical appearance description: Uniform tube feet has 8 tentacles, large and robust tentacles with soft and flexible elongated worm like body. Pale in color with cream spots or patches.";
+  } else if (label == "Holothuria Atra") {
+    return "Phylum: Echinodermata \nOrder: Aspidochirotida \nGenus: Holothuria \nSpecies: Holothuria atra \nPhysical appearance description: Black, dark brown in color ";
+  } else if (label == "Holothuria Tubolosa") {
+    return "Phylum: Echinodermata \nOrder: Aspidochirotida \nGenus: Holothuria \nSpecies: Holothuria tubulosa \nPhysical appearance description: Dark brown/ black with white spots or markings. ";
   } else {
-    return "🚂";
+    return "...";
   }
 }
 
