@@ -8,13 +8,21 @@ function preload() {
 }
 
 function setup() {
-  // Create a responsive canvas
-  let canvas = createCanvas(640, 520);
-  canvas.parent('sketch-container');
-  
-  video = createCapture(VIDEO);
-  video.hide();
-  classifyVideo();
+   // Create a responsive canvas
+   let canvas = createCanvas(windowWidth, windowHeight);
+   canvas.parent('sketch-container');
+ 
+   // Create video capture with options for front and back camera
+   const constraints = {
+     video: {
+       facingMode: 'environment' // 'user' for front camera, 'environment' for back camera
+     }
+   };
+   video = createCapture(constraints);
+   video.size(width, height);
+   video.hide();
+ 
+   classifyVideo();
 }
 
 function classifyVideo() {
@@ -64,6 +72,10 @@ function gotResults(error, results) {
   }
   label = results[0].label;
   classifyVideo();
+}
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  video.size(width, height);
 }
 
 window.onload = function() {
