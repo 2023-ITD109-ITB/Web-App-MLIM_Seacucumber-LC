@@ -1,7 +1,7 @@
 let video;
 let label = "waiting...";
 let classifier;
-let modelURL = 'https://teachablemachine.withgoogle.com/models/bXy2kDNi/';
+let modelURL = 'https://teachablemachine.withgoogle.com/models/lEezbokqk/';
 
 function preload() {
   classifier = ml5.imageClassifier(modelURL + 'model.json');
