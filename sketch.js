@@ -1,5 +1,5 @@
 let video;
-let label = "waiting...";
+let label = "loading...";
 let classifier;
 let modelURL = 'https://teachablemachine.withgoogle.com/models/fPt94lkdX/';
 
