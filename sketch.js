@@ -1,7 +1,7 @@
 let video;
 let label = "waiting...";
 let classifier;
-let modelURL = 'https://teachablemachine.withgoogle.com/models/lEezbokqk/';
+let modelURL = 'https://teachablemachine.withgoogle.com/models/fPt94lkdX/';
 
 function preload() {
   classifier = ml5.imageClassifier(modelURL + 'model.json');
@@ -61,7 +61,7 @@ function getInfo() {
   } else if (label == "Holothuria Tubolosa") {
     return "Phylum: Echinodermata \nOrder: Aspidochirotida \nGenus: Holothuria \nSpecies: Holothuria tubulosa \nPhysical appearance description: Dark brown/ black with white spots or markings. ";
   } else {
-    return "...";
+    return "!";
   }
 }
 
